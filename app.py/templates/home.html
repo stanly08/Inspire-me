@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: bisque;
+        }
+
+        h1{
+            text-align: center;
+            justify-content: center;
+        }
+        .intro{
+            text-align: center;
+        }
+        form{
+            display: inline;
+            margin: 30px;            
+        }
+        button{
+            border: 15px;
+            border-radius: 5px;
+            background-color: brown;
+            color: antiquewhite;
+            justify-content: center;
+            margin-left: 30px;
+            margin-top: 5px;
+            
+        }
+        ul{
+            text-align: center;
+            margin :10px;
+            padding: 0%;
+            list-style: none;
+            text-decoration: none;
+            color: white;
+            align-items: stretch;
+            align-content: stretch;
+            
+        }
+        ul li{
+            float: left;
+            width: 250px;
+            height: 30px;
+            background-color: brown;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        input{
+            border-radius: 8px;
+        }
+
+        .img-gallery{
+            width: 80%;
+            margin: 100px auto 50px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+            border-radius: 25px;
+        }
+        .img-gallery img{
+            width: 80%;
+            height: 250px;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: 0.2s;
+
+        }
+
+        .img-gallery img:hover{
+        width: 350px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0 32px 75px, rgba(68,77,136,0.2);
+        }
+        
+    </style>
+    <title>inspire me</title>
+</head>
+<body>
+    <h1>Ispire Me</h1>
+    <div class="intro">
+        <p>
+            Great ambitions start with you, Make a difference!
+        </p>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="signup.html">Sign up</a></li>
+                <li><a href="login.html">Log in</a></li>
+                <li><a href="goals.html">Goals</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div>
+        <div>
+            <form method="POST">
+                <label for="age">Age:</label>
+                <input type="number" placeholder="Y.O.B" id="year of birth">
+                <div>
+                    <button type="submit">submit</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    <div class="img-gallery">
+        <img src="https://i.pinimg.com/236x/79/5b/fd/795bfd02e7e4f0cd6a000bac3478ba1c.jpg" alt="image">
+        <img src="https://i.pinimg.com/236x/15/a9/73/15a973dd4cfc4dad4372734d9ade9b7a.jpg" alt="#">
+        <img src="https://i.pinimg.com/236x/5c/fb/3a/5cfb3aea569e3adbc9f1a69c72aacc5f.jpg" alt="#">
+    </div>
+        
+
+    {% if recommendation %}
+        <h2>Recommendation:</h2>
+        <p>{{ recommendation }}</p>
+    {% endif %}
+</body>
+</html>
